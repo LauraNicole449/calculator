@@ -43,7 +43,7 @@ function changeTheme(){
         buttonTheme.style.backgroundColor = "#d73b34";
         resultDisplay.style.color = "#181f32"
         calBack.style.backgroundColor = "#252d44";
-        buttons.style.backgroundColor = "#252d44";
+        buttons.style.backgroundColor = "#d02d43";
         deleteButton.style.backgroundColor = "#181f32";
         resetButton.style.backgroundColor = "#181f32";
         resultButton.style.backgroundColor = "#181f32";
