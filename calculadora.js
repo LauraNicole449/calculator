@@ -19,20 +19,17 @@ function clearDisplay() {
   document.getElementById('result-display').value = displayValue;
 }
 
-
 let option = 2;
-
 function changeTheme(){
   let body = document.getElementById("body");
   let themeChangeBack = document.getElementById("theme-change");
   let buttonTheme = document.getElementById("theme-change-button");
   let resultDisplay = document.getElementById("result-display");
   let calBack = document.getElementById("calc-background");
-  let buttons = document.getElementsByClass("buttons");
+  let buttons = document.getElementsByClassName('buttons button');
   let deleteButton = document.getElementById("delete");
   let resetButton = document.getElementById("reset");
-  let resultButton = document.getElementByIf("result");
-  
+  let resultButton = document.getElementById("result");
   
   switch (option) {
     case 1:
@@ -41,50 +38,58 @@ function changeTheme(){
         body.style.backgroundColor = "#3b4664";
         themeChangeBack.style.backgroundColor = "#252d44";
         buttonTheme.style.backgroundColor = "#d73b34";
-        resultDisplay.style.color = "#181f32"
+        resultDisplay.style.backgroundColor = "#181f32"
+        resultDisplay.style.color = "white";
         calBack.style.backgroundColor = "#252d44";
-        buttons.style.backgroundColor = "#d02d43";
-        deleteButton.style.backgroundColor = "#181f32";
-        resetButton.style.backgroundColor = "#181f32";
-        resultButton.style.backgroundColor = "#181f32";
+        for(i=0;i<buttons.length;i++){
+          buttons[i].style.backgroundColor = "#eae3db";
+          buttons[i].style.border = "#a79e90";
+        }
+        deleteButton.style.backgroundColor = "#647299";
+        resetButton.style.backgroundColor = "#647299";
+        resultButton.style.backgroundColor = "#d13f30";
+        resetButton.style.color = "white";
         option = 2; 
-      } else {
-        return;
-      }
       break;
+      }
     case 2:
       if (buttonTheme) {
         buttonTheme.style.left = "28px";
-        body.style.backgroundColor = "#3b4664";
-        themeChangeBack.style.backgroundColor = "#252d44";
-        buttonTheme.style.backgroundColor = "#d73b34";
-        resultDisplay.style.color = "#181f32"
-        calBack.style.backgroundColor = "#252d44";
-        buttons.style.backgroundColor = "#252d44";
-        deleteButton.style.backgroundColor = "#181f32";
-        resetButton.style.backgroundColor = "#181f32";
-        resultButton.style.backgroundColor = "#181f32";
+        body.style.backgroundColor = "#e6e6e6";
+        themeChangeBack.style.backgroundColor = "#d3cdcd";
+        buttonTheme.style.backgroundColor = "#c8570a";
+        resultDisplay.style.backgroundColor = "#eeeeee"
+        resultDisplay.style.color = "#35372c";
+        calBack.style.backgroundColor = "#d4cdcd";
+        for(i=0;i<buttons.length;i++){
+          buttons[i].style.backgroundColor = "#e5e4e0";
+          buttons[i].style.border = "#a79e90";
+        }
+        deleteButton.style.backgroundColor = "#647299";
+        resetButton.style.backgroundColor = "#647299";
+        resultButton.style.backgroundColor = "#d13f30";
         option = 3; 
-      } else {
-        return;
-      }
+      } 
       break;
     case 3:
       if (buttonTheme) {
         buttonTheme.style.left = "55px";
-        body.style.backgroundColor = "#3b4664";
-        themeChangeBack.style.backgroundColor = "#252d44";
-        buttonTheme.style.backgroundColor = "#d73b34";
-        resultDisplay.style.color = "#181f32"
-        calBack.style.backgroundColor = "#252d44";
-        buttons.style.backgroundColor = "#252d44";
-        deleteButton.style.backgroundColor = "#181f32";
-        resetButton.style.backgroundColor = "#181f32";
-        resultButton.style.backgroundColor = "#181f32";
+        body.style.backgroundColor = "#17062a";
+        themeChangeBack.style.backgroundColor = "#1e0837";
+        buttonTheme.style.backgroundColor = "#00d8ce";
+        resultDisplay.style.backgroundColor = "#1e0836"
+        resultDisplay.style.color = "#fde03c";
+        calBack.style.backgroundColor = "#1e0837";
+        for(i=0;i<buttons.length;i++){
+          buttons[i].style.backgroundColor = "#331b4d";
+          buttons[i].style.border = "#851c9d";
+        }
+        deleteButton.style.backgroundColor = "#56077c";
+        resetButton.style.backgroundColor = "#56077c";
+        resultButton.style.backgroundColor = "#00decf";
+        result.style.color = "black";
         option = 1; 
-      } else {
-        return;
-      }
+      } 
       break;
   }
 }
