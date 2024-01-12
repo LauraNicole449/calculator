@@ -7,12 +7,14 @@ function appendToDisplay(value) {
 
 function calculate() {
   try {
-    displayValue = eval(displayValue);
+    const result = new Function('return ' + displayValue)();
+    displayValue = result.toString(); // Convierte el resultado a cadena
     document.getElementById('result-display').value = displayValue;
   } catch (error) {
     document.getElementById('result-display').value = 'Error';
   }
 }
+
 
 function clearDisplay() {
   displayValue = '';
