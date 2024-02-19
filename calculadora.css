@@ -72,6 +72,7 @@
   color: #3c4556;
   background-color: #eae3db;
   border-bottom-color: #b69f9a;
+  cursor:pointer;
 }
 #delete{
   font-size: 20px;

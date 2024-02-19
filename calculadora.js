@@ -1,5 +1,25 @@
 let displayValue = '';
 
+//Add Events click in all button
+let buttons = document.getElementsByTagName('button');
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener('click',(e)=>{
+    let resetBtns = "reset" == e.target.id;
+    let resultBtns = "result" == e.target.id;
+    let deleteBtns = "delete" == e.target.id;
+    
+    if(deleteBtns || resetBtns){
+      clearDisplay();
+    }
+    else if(resultBtns){
+      calculate();
+    }
+    else{
+      appendToDisplay(e.target.id);
+    }
+  })
+}
+
 function appendToDisplay(value) {
   displayValue += value;
   document.getElementById('result-display').value = displayValue;
@@ -60,7 +80,7 @@ function changeTheme(){
         body.style.backgroundColor = "#e6e6e6";
         themeChangeBack.style.backgroundColor = "#d3cdcd";
         buttonTheme.style.backgroundColor = "#c8570a";
-        resultDisplay.style.backgroundColor = "#eeeeee"
+        resultDisplay.style.backgroundColor = "rgb(206 206 206)"
         resultDisplay.style.color = "#35372c";
         calBack.style.backgroundColor = "#d4cdcd";
         for(i=0;i<buttons.length;i++){
@@ -79,9 +99,9 @@ function changeTheme(){
         body.style.backgroundColor = "#17062a";
         themeChangeBack.style.backgroundColor = "#1e0837";
         buttonTheme.style.backgroundColor = "#00d8ce";
-        resultDisplay.style.backgroundColor = "#1e0836"
+        resultDisplay.style.backgroundColor = "rgb(55 14 100)"
         resultDisplay.style.color = "#fde03c";
-        calBack.style.backgroundColor = "#1e0837";
+        calBack.style.backgroundColor = "rgb(43 21 67)";
         for(i=0;i<buttons.length;i++){
           buttons[i].style.backgroundColor = "#331b4d";
           buttons[i].style.border = "#851c9d";
