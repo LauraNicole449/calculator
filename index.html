@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="calculadora.css">
-    <script src="calculadora.js"></script>
   </head>
   <body id="body">
     <div id="theme-change">
@@ -13,25 +12,27 @@
     <input type="text" id="result-display" readonly disabled/>
     <div id="calc-background">
       <div class="buttons">
-        <button onclick="appendToDisplay('7')">7</button>
-        <button onclick="appendToDisplay('8')">8</button>
-        <button onclick="appendToDisplay('9')">9</button>
-        <button id="delete" onclick="clearDisplay()">DEL</button>
-        <button onclick="appendToDisplay('4')">4</button>
-        <button onclick="appendToDisplay('5')">5</button>
-        <button onclick="appendToDisplay('6')">6</button>
-        <button onclick="appendToDisplay('+')">+</button>
-        <button onclick="appendToDisplay('1')">1</button>
-        <button onclick="appendToDisplay('2')">2</button>
-        <button onclick="appendToDisplay('3')">3</button>
-        <button onclick="appendToDisplay('-')">-</button>
-        <button onclick="appendToDisplay('.')">.</button>
-        <button onclick="appendToDisplay('0')">0</button>
-        <button onclick="appendToDisplay('/')">/</button>
-        <button onclick="appendToDisplay('*')">x</button>
-        <button id="reset" onclick="clearDisplay()">RESET</button>
-        <button id="result" onclick="calculate()">=</button>
+        <button id='7'>7</button>
+        <button id='8'>8</button>
+        <button id='9'>9</button>
+        <button id="delete">DEL</button>
+        <button id='4'>4</button>
+        <button id='5'>5</button>
+        <button id='6'>6</button>
+        <button id='+'>+</button>
+        <button id='1'>1</button>
+        <button id='2'>2</button>
+        <button id='3'>3</button>
+        <button id='-'>-</button>
+        <button id='.'>.</button>
+        <button id='0'>0</button>
+        <button id='/'>/</button>
+        <button id='*'>x</button>
+        <button id="reset">RESET</button>
+        <button id="result">=</button>
       </div>
     </div>
+    
+    <script src="calculadora.js"></script>
   </body>
 </html>
