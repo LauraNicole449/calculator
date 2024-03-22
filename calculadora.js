@@ -97,7 +97,7 @@ function changeTheme(){
       if (buttonTheme) {
         buttonTheme.style.left = "55px";
         body.style.backgroundColor = "#17062a";
-        themeChangeBack.style.backgroundColor = "#1e0837";
+        themeChangeBack.style.backgroundColor = "rgb(42 11 76)";
         buttonTheme.style.backgroundColor = "#00d8ce";
         resultDisplay.style.backgroundColor = "rgb(55 14 100)"
         resultDisplay.style.color = "#fde03c";
